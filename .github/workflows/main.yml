@@ -23,8 +23,8 @@ jobs:
       run: |
         LINES=$(wc -l < stickers.txt)
         RAND=$(( ( RANDOM % LINES ) + 1 ))
-        STICKER=$(sed -n "${RAND}p" stickers.txt)
-        echo "STICKER=$STICKER" >> $GITHUB_ENV
+        STICKER=$(sed -n "${RAND}p"  stickers.txt)
+        echo "STICKER=$STICKER" >>  $GITHUB_ENV
 
     - name: Pull latest changes
       run: |
